@@ -1,12 +1,12 @@
-# User Root Agent System
+# weihung-user-claude
 
-Personal global Claude Code configuration.
+Personal global Claude Code agent system.
 Applies to all projects via `~/.claude/`.
 
 ## Structure
 
 ```
-CLAUDE.md                          # Core laws (~30 lines, always loaded)
+CLAUDE.md                          # Constitution (~40 lines, always loaded)
 rules/
   clean-architecture.md            # Architecture quality gates (always loaded)
   go.md                            # Go rules (*.go)
@@ -17,24 +17,55 @@ rules/
   deployment.md                    # Deploy safety (always loaded)
   chinese-writing.md               # Chinese output quality (always loaded)
 skills/
-  leveraging-tasks/                # Thin router: classify → gate → delegate
+  leveraging-tasks/                # Dev task router: classify → gate → delegate
+  providing-knowledge/             # Question answering: mental model first
+  investigating/                   # Research: comprehensive, traceable
+  inspecting/                      # Audit: plan → investigate per item
   reflecting-to-root/              # Session reflection → user/project routing
 ```
+
+## Routing
+
+CLAUDE.md contains the routing table.
+Before responding, classify the request:
+
+1. **External skill applies** (superpowers, rcc, openspec, ttt, etc.) → use that skill directly
+2. **Development task** (implement, design, debug, deploy) → `leveraging-tasks`
+3. **Question** (explain, what is, how does) → `providing-knowledge`
+4. **Investigation** (research, find out, current state of) → `investigating`
+5. **Inspection** (check, audit, verify, review) → `inspecting`
 
 ## Skills
 
 ### leveraging-tasks
 
-Thin router that intercepts all significant tasks.
-Classifies into four pipes (implement, design, debug, deploy) with cross-cutting refactor awareness.
+Thin router for development tasks.
+Four pipes (implement, design, debug, deploy) with cross-cutting refactor awareness.
 
-- **Quality awareness** is continuous, not just an entry gate
-- **Refactor** is not a separate pipe — it's a reflex embedded in all pipes
-- **Feedback loops**: implement discovers new context → back to design; debug finds architectural root cause → refactor first
+- Quality awareness is continuous, not just an entry gate
+- Refactor is not a separate pipe — it's a reflex embedded in all pipes
+- Feedback loops: implement discovers new context → back to design; debug finds architectural root cause → refactor first
+
+### providing-knowledge
+
+Answers questions by building mental models.
+Clear, no flattery, honest about uncertainty.
+
+### investigating
+
+Conducts research with traceable evidence.
+Every claim linked to a source.
+Distinguishes confirmed facts from inferences.
+
+### inspecting
+
+Builds a comprehensive check plan, then verifies each item using `investigating`.
+Plan first, check second.
+User controls scope.
 
 ### reflecting-to-root
 
-Post-session reflection that captures learnings at the correct scope.
+Post-session reflection that routes learnings to the correct scope.
 
 - Cross-project patterns → `~/.claude/CLAUDE.md` or `~/.claude/rules/`
 - Project-specific patterns → `.claude/CLAUDE.md` or `.claude/rules/`
@@ -54,6 +85,7 @@ Post-session reflection that captures learnings at the correct scope.
 | Router / orchestration | opus (session default) |
 | implement / deploy / refactor | sonnet |
 | design / debug | opus |
+| question / investigation / inspection | sonnet |
 | search / summary / formatting | haiku |
 
 ## Not Tracked
