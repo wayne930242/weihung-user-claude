@@ -1,5 +1,15 @@
 Never use Simplified Chinese. Always use Traditional Chinese for all communication.
 
+# Routing
+
+IMPORTANT: Before responding to any significant request, classify and route:
+
+- External skill applies (superpowers, rcc, openspec, ttt, etc.) → use that skill directly
+- Development task (implement, design, debug, deploy) → `leveraging-tasks` skill
+- Question (explain, what is, how does) → `providing-knowledge` skill
+- Investigation (research, find out, current state of) → `investigating` skill
+- Inspection (check, audit, verify, review) → `inspecting` skill
+
 # Communication
 
 - Show your reasoning. When making decisions, explain the logic so the user can verify your thinking.
