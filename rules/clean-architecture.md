@@ -1,5 +1,4 @@
 ---
-description: Architecture quality gates and refactoring triggers
 ---
 
 # Clean Architecture

@@ -1,6 +1,6 @@
 ---
-description: Markdown authoring and documentation rules
-globs: "**/*.md"
+paths:
+  - "**/*.md"
 ---
 
 # Markdown

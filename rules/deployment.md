@@ -1,5 +1,4 @@
 ---
-description: Deployment safety rules for rsync, Ansible, and CI/CD
 ---
 
 # Deployment

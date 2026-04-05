@@ -1,5 +1,4 @@
 ---
-description: Package and dependency version rules
 ---
 
 # Dependencies

@@ -1,5 +1,4 @@
 ---
-description: Chinese language output quality for user-facing text
 ---
 
 # Chinese Writing

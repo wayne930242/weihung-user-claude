@@ -1,6 +1,6 @@
 ---
-description: TypeScript and TSX development rules
-globs: "**/*.{ts,tsx}"
+paths:
+  - "**/*.{ts,tsx}"
 ---
 
 # TypeScript

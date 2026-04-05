@@ -1,6 +1,6 @@
 ---
-description: Shell script safety and style rules
-globs: "**/*.sh"
+paths:
+  - "**/*.sh"
 ---
 
 # Shell

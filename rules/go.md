@@ -1,6 +1,6 @@
 ---
-description: Go-specific editing and compilation rules
-globs: "**/*.go"
+paths:
+  - "**/*.go"
 ---
 
 # Go

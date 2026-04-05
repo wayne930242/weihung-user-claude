@@ -1,6 +1,6 @@
 ---
-description: Python development rules
-globs: "**/*.py"
+paths:
+  - "**/*.py"
 ---
 
 # Python
